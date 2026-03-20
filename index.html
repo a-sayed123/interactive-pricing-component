@@ -1,65 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,211&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Frontend Mentor | Interactive pricing component</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,211&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <h1 class="header__title">Simple, traffic-based pricing</h1>
+        <p class="header__subtitle">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
+      </div>
+    </header>
 
-<header class="header">
-  <div class="header__content">
-    <h1 class="header__title">Simple, traffic-based pricing</h1>
-    <p class="header__subtitle">Sign-up for our 30-day trial. No credit card required.</p>
-  </div>
-</header>
-
-<main>
-  <article class="card text-center">
-    <div class="card__header">
-      <h3 class="header-title"><span class="price" data-scale-toggle>$16.00</span> /month</h3>
-      <p class="header-subtitle">100K &nbsp; Pageviews</p>
-    </div>
-    <div class="card__content">
-      <input type="range" id="slider" min="0" max="4" step="1" value="2">
-    </div>
-    <div class="card__footer">
-      <ul class="flex__list">
-        <li class="flex__item">Unlimited websites</li>
-        <li class="flex__item">100% data ownership</li>
-        <li class="flex__item">Email reports</li>
-        <button class="flex__btn">Start my trial</button>
-      </ul>
-    </div>
-  </article>
-</main>
-
-
-
-<!-- 
-  Monthly Billing
-  Yearly Billing 25% discount
-  
-
-
-- 10K pageviews / $8 per month
-- 50K pageviews / $12 per month
-- 100K pageviews / $16 per month
-- 500k pageviews / $24 per month
-- 1M pageviews / $36 per month
-
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/a-sayed123">Ahmed Sayed</a>.
-  </div> -->
-
-  <script src="./script/script.js"></script>
-</body>
+    <main>
+      <article class="card text-center">
+        <div class="card__header">
+          <h3 class="header-title">
+            <span class="price" data-scale-toggle>$16.00</span> /month
+          </h3>
+          <p class="header-subtitle">100K &nbsp; Pageviews</p>
+        </div>
+        <div class="card__content">
+          <input type="range" id="slider" min="0" max="4" step="1" value="2" />
+          <div class="billing-toggle">
+            <span class="toggle-right">Monthly Billing</span>
+            <label class="switch">
+              <input type="checkbox" id="discount" />
+              <span class="slider"></span>
+            </label>
+            <span class="toggle-left"
+              >Yearly Billing &nbsp;
+              <span class="discount-amount" style="display: inline"
+                >25% discount</span
+              >
+            </span>
+          </div>
+        </div>
+        <div class="card__footer">
+          <ul class="flex__list">
+            <li class="flex__item">Unlimited websites</li>
+            <li class="flex__item">100% data ownership</li>
+            <li class="flex__item">Email reports</li>
+          </ul>
+          <button class="flex__btn">Start my trial</button>
+        </div>
+      </article>
+    </main>
+    <script src="./script/script.js"></script>
+  </body>
 </html>
